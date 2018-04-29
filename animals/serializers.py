@@ -15,7 +15,7 @@ class AnimalSerializer(serializers.ModelSerializer):
         return [AnimalWeightSerializer(x).data for x in obj.get_my_weights()]
 
 
-class AnimalWeightSerializer(serializers.HyperlinkedModelSerializer):
+class AnimalWeightSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = AnimalWeight
